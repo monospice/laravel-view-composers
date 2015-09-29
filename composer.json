@@ -1,7 +1,7 @@
 {
-    "name": "monospice/skeleton-project",
-    "description": "A skeleton project for Monospice packages.",
-    "keywords": ["skeleton", "example"],
+    "name": "monospice/laravel-view-composers",
+    "description": "An intuitive abstraction for organizing Laravel View Composers and View Creators",
+    "keywords": ["laravel", "view", "composer", "creator"],
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -11,7 +11,9 @@
         }
     ],
     "require": {
-        "php": ">=5.4.0"
+        "php": ">=5.3.0",
+        "illuminate/support": ">=4.0",
+        "monospice/spicy-identifiers": "1.0.x-dev"
     },
     "require-dev": {
         "phpspec/phpspec": "~2.3",
@@ -19,12 +21,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Monospice\\Skeleton\\": "src/"
+            "Monospice\\LaravelViewComposers\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Monospice\\Skeleton\\Test\\": "tests/"
+            "Monospice\\LaravelViewComposers\\Test\\": "tests/"
          }
     }
 }

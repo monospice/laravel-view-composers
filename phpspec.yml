@@ -1,7 +1,7 @@
 formatter.name: pretty
 suites:
     main:
-        namespace: Monospice\Skeleton
-        psr4_prefix: Monospice\Skeleton
+        namespace: Monospice\LaravelViewComposers
+        psr4_prefix: Monospice\LaravelViewComposers
         spec_path: tests
         spec_prefix: Spec
