@@ -1,0 +1,30 @@
+{
+    "name": "monospice/skeleton-project",
+    "description": "A skeleton project for Monospice packages.",
+    "keywords": ["skeleton", "example"],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Cy Rossignol",
+            "email": "cy@rossignols.me"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "require-dev": {
+        "phpspec/phpspec": "~2.3",
+        "mockery/mockery": "0.9.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Monospice\\Skeleton\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Monospice\\Skeleton\\Test\\": "tests/"
+         }
+    }
+}

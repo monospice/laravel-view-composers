@@ -1,0 +1,7 @@
+formatter.name: pretty
+suites:
+    main:
+        namespace: Monospice\Skeleton
+        psr4_prefix: Monospice\Skeleton
+        spec_path: tests
+        spec_prefix: Spec
