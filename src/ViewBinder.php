@@ -178,7 +178,7 @@ class ViewBinder implements Interfaces\ViewBinder
                 continue;
             }
 
-            $classesOrFunctions[$key] =  $this->namespace . '\\' . $classOrFunc;
+            $classesOrFunctions[$key] = $this->namespace . '\\' . $classOrFunc;
         }
 
         return $classesOrFunctions;

@@ -5,7 +5,7 @@ namespace Monospice\LaravelViewComposers;
 use Illuminate\Support\ServiceProvider;
 use Monospice\SpicyIdentifiers\DynamicMethod;
 
-use Monospice\LaravelViewComposers\ComposerBinder;
+use Monospice\LaravelViewComposers\ViewBinder;
 
 /**
  * Binds View Composers and View Creators to views
@@ -18,6 +18,13 @@ use Monospice\LaravelViewComposers\ComposerBinder;
  */
 class ViewBinderServiceProvider extends ServiceProvider
 {
+    /**
+     * The ViewBinder instance used to bind views
+     *
+     * @var Monospice\LaravelViewComposers\ViewBinder
+     */
+    protected $viewBinder;
+
     /**
      * Bind the View Composers to the Views during service boot
      *
