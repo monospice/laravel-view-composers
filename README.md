@@ -1,6 +1,8 @@
 Laravel View Composers
 ======================
 
+[![Build Status](https://travis-ci.org/monospice/laravel-view-composers.svg?branch=master)](https://travis-ci.org/monospice/laravel-view-composers)
+
 **An intuitive abstraction for organizing Laravel View Composers and View
 Creators.**
 
@@ -32,7 +34,7 @@ class ViewComposerServiceProvider extends ViewBinderServiceProvider
     protected function bindUserViews()
     {
         $this->setPrefix('user')
-            ->compose('profile', 'image')->with('UserComposer');
+            ->compose('profile', 'image')->with('UserComposer')
             ->compose('favorites')->with('UserComposer', 'FavoritesComposer');
     }
 
@@ -100,8 +102,8 @@ class ViewComposerServiceProvider extends ViewBinderServiceProvider
 ### Namespaces
 
 To make these definitions more concise, use the `setNamespace()` method to
-declare the namespace that will be used for the following View Composer or
-View Creator classes.
+declare the namespace to use for the following View Composer or View Creator
+classes.
 
 ```php
 ...
@@ -118,9 +120,8 @@ View Creator classes.
 ...
 ```
 
-In the example above, the Service Provider will apply the
-`App\Http\ViewComposers` namespace to both the `CommentComposer` and the
-`AnotherComposer` classes.
+In the example above, the Service Provider applies the `App\Http\ViewComposers`
+namespace to both the `CommentComposer` and the `AnotherComposer` classes.
 
 One may change the namespace at any time by calling `setNamespace()` again.
 Any namespaces are automatically cleared at the end of each `bindViews()`
@@ -129,24 +130,24 @@ method.
 ### View Prefixes
 
 Similar to namespaces above, one may set the namespace-like prefix of the bound
-views for more concise code:
+views by calling `setPrefix()` for more concise code:
 
 ```php
 ...
     protected function bindNavbarViews()
     {
         // The hard way
-        $this->compose('partials.navbar.user_info')->with('NavbarComposer');
+        $this->compose('partials.navbar.info.user')->with('NavbarComposer');
 
         // or just:
-        $this->setPrefix('partials.navbar')
-            ->compose('user_info', 'company_info')->with('NavbarComposer');
+        $this->setPrefix('partials.navbar.info')
+            ->compose('user', 'company')->with('NavbarComposer');
     }
 ...
 ```
 
-As demonstrated, the application binds the `partials.navbar.user_info` and
-`partials.navbar.company_info` views to the `NavbarComposer`.
+As demonstrated, the application binds the `partials.navbar.info.user` and
+`partials.navbar.info.company` views to the `NavbarComposer`.
 
 One may change the prefix at any time by calling `setPrefix()` again. Any
 prefixes are automatically cleared at the end of each `bindViews()` method.
