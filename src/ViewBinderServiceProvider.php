@@ -21,7 +21,7 @@ class ViewBinderServiceProvider extends ServiceProvider
     /**
      * The ViewBinder instance used to bind views
      *
-     * @var Monospice\LaravelViewComposers\ViewBinder
+     * @var ViewBinder
      */
     protected $viewBinder;
 
