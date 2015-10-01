@@ -17,7 +17,7 @@ class ViewBinderSpec extends ObjectBehavior
 
     function let()
     {
-        $this->viewFactory = Mockery::mock('Illuminate\Contracts\View\Factory');
+        $this->viewFactory = Mockery::mock('Illuminate\View\Factory');
         $this->beConstructedWith($this->viewFactory);
     }
 

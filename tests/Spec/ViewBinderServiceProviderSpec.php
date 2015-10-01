@@ -18,7 +18,7 @@ class ViewBinderServiceProviderSpec extends ObjectBehavior
 
     function it_binds_views_to_view_composers_and_creators()
     {
-        $viewFactory = Mockery::mock('Illuminate\Contracts\View\Factory');
+        $viewFactory = Mockery::mock('Illuminate\View\Factory');
         $viewFactory->shouldReceive('composer')
             ->with(['testview'], 'TestComposer')->once();
 

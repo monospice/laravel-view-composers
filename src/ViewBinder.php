@@ -2,7 +2,7 @@
 
 namespace Monospice\LaravelViewComposers;
 
-use Illuminate\Contracts\View\Factory as ViewFactory;
+use Illuminate\View\Factory as ViewFactory;
 
 use Monospice\LaravelViewComposers\Interfaces;
 
